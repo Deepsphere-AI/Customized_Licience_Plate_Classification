@@ -102,29 +102,29 @@ def Score(X_test_tfidf,y_test,model):
 	score_list.append((score*100).round())
 	return (score*100).round()
 
-def Test_button_Plot(History):
+# def Test_button_Plot(History):
 
-	fig,ax = plt.subplots(1,2,figsize=(15,7))
-	# summarize history for accuracy
-	ax[0].plot(History.history['accuracy'])
-	ax[0].plot(History.history['val_accuracy'])
-	ax[0].set_title("Accuracy of Data")
-	ax[0].set_ylabel('Accuracy')
-	ax[0].set_xlabel('Epochs')
-	ax[0].legend(['Train', 'Validation'], loc='upper left')
-	ax[0].set_xticks([])
-	ax[0].set_yticks([])
+# 	fig,ax = plt.subplots(1,2,figsize=(15,7))
+# 	# summarize history for accuracy
+# 	ax[0].plot(History.history['accuracy'])
+# 	ax[0].plot(History.history['val_accuracy'])
+# 	ax[0].set_title("Accuracy of Data")
+# 	ax[0].set_ylabel('Accuracy')
+# 	ax[0].set_xlabel('Epochs')
+# 	ax[0].legend(['Train', 'Validation'], loc='upper left')
+# 	ax[0].set_xticks([])
+# 	ax[0].set_yticks([])
 
-	# summarize history for loss
-	ax[1].plot(History.history['loss'])
-	ax[1].plot(History.history['val_loss'])
-	ax[1].set_title('Loss of Data')
-	ax[1].set_ylabel('Loss')
-	ax[1].set_xlabel('Epochs')
-	ax[1].legend(['Train', 'Validation'])
-	ax[1].set_xticks([])
-	ax[1].set_yticks([])
-	fig.savefig("plot.png")
+# 	# summarize history for loss
+# 	ax[1].plot(History.history['loss'])
+# 	ax[1].plot(History.history['val_loss'])
+# 	ax[1].set_title('Loss of Data')
+# 	ax[1].set_ylabel('Loss')
+# 	ax[1].set_xlabel('Epochs')
+# 	ax[1].legend(['Train', 'Validation'])
+# 	ax[1].set_xticks([])
+# 	ax[1].set_yticks([])
+# 	fig.savefig("plot.png")
 
 def Deep_Learning():
 	X_train_tfidf,X_test_tfidf,y_train,y_test,_ = Preprocessing(0.1)
@@ -254,8 +254,8 @@ def Image_Preprocessing(model):
 					result_list.append("Non_Personalised")
 				elif result== 1:
 					result_list.append("Personalised")
-				elif result !=0 or result!=1:
-					result_list.append("Unknown")
+			elif result == None:
+				result_list.append("Unknown")
 		except:
 			continue
 	temper_list = []
@@ -339,13 +339,13 @@ with c12:
 		st.markdown("#### **Model Selection**")
 with c13:
 	if select2 in st_list2:
-		Algorithm_Selected = st.selectbox("",['Select the Model','Random Forest','Logistic Regression','Deep Learning'])
+		Algorithm_Selected = st.selectbox("",['Select the Model','Random Forest','Logistic Regression','Artificial Neural Network'])
 with c14:
 	st.write("")
 with c15:
 	st.write("")
 
-st_list3 = ['Decision Tree','Random Forest','Logistic Regression','Deep Learning']
+st_list3 = ['Decision Tree','Random Forest','Logistic Regression','Artificial Neural Network']
 #c21,c22,c23,c24,c25 = st.columns([0.25,1.5,2.75,0.25,1.75])
 with c11:
 	st.write("")
@@ -536,7 +536,7 @@ with c35:
 	st.write("")
 
 
-if len(HP_List)!=0 and Algorithm_Selected=='Deep Learning' and Train_button==True:
+if len(HP_List)!=0 and Algorithm_Selected=='Artificial Neural Network' and Train_button==True:
 
 	score,_ = Deep_Learning()
 	with c31:
@@ -626,7 +626,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 
 
 
-			elif Algorithm_Selected == "Deep Learning":
+			elif Algorithm_Selected == "Artificial Neural Network":
 				_,model = Deep_Learning()
 				Image_Preprocessing(model)
 
@@ -639,7 +639,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 				# elif Algorithm_Selected == "Random_Forest":
 				# 	Lp_Class = Image_Preprocessing(image_path,RF_Classifier)
 				# 	st.write(Lp_Class)
-				# elif Algorithm_Selected == "Deep Learning":
+				# elif Algorithm_Selected == "Artificial Neural Network":
 				# 	Lp_Class = Image_Preprocessing(image_path,model)
 				# 	st.write(Lp_Class)
 			# 	text,result = Image_Preprocessing(image)
@@ -702,7 +702,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 
 
 st.sidebar.selectbox("",['Library Used','Streamlit','Pandas','Opencv','scikit-learn','Tensorflow'],key='key2')
-st.sidebar.selectbox("",['Model Implemented','Random Forest','Logistic Regression','Deep Learning'],key='key3')
+st.sidebar.selectbox("",['Model Implemented','Random Forest','Logistic Regression','Artificial Neural Network'],key='key3')
 
 c61,c62,c63 = st.sidebar.columns((1,1,1))
 with c61:
