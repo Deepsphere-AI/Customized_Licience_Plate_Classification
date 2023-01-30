@@ -648,6 +648,24 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 			# dictionary = {"Licence Plate":text_list,"class":result_list}
 			# dataframe = pd.DataFrame(dictionary)
 			# st.dataframe(dataframe)
+
+			with c41:
+				st.write("")
+			with c42:
+				st.write("")
+			with c43:
+				if Test_Option:
+					st.write("")
+				try:
+					df = pd.read_csv("OutPut.csv")
+					st.dataframe(df.head(df.shape[0]),width=700)
+				except:
+					pass
+				# temp_reset()
+			with c44:
+				st.write("")
+			with c45:
+				st.write("")
 	with c44:
 		st.write("")
 	with c45:
@@ -657,23 +675,6 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 		# 	st.write("")
 		# 	st.write("")
 		# 	Test_Preview = st.button("Preview OutPut")
-	with c41:
-		st.write("")
-	with c42:
-		st.write("")
-	with c43:
-		if Test_Option:
-			st.write("")
-		try:
-			df = pd.read_csv("OutPut.csv")
-			st.dataframe(df.head(df.shape[0]),width=800,height=400)
-		except:
-			pass
-		# temp_reset()
-	with c44:
-		st.write("")
-	with c45:
-		st.write("")
 
 	c51,c52,c53 = st.columns([8,4,7])
 	with c51:
