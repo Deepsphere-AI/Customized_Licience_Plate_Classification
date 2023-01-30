@@ -532,7 +532,7 @@ with c35:
 	st.write("")
 
 
-if len(HP_List)!=0 and Algorithm_Selected=='Deep Learning':
+if len(HP_List)!=0 and Algorithm_Selected=='Deep Learning' and Train_button==True:
 
 	score,_ = Deep_Learning()
 	with c31:
