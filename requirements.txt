@@ -10,6 +10,5 @@ textblob
 wordninja
 regex
 nltk
-os-sys
 numpy
 streamlit
