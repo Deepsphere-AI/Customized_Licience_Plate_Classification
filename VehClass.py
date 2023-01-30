@@ -1,4 +1,4 @@
-import spacy
+# import spacy
 import nltk
 import cv2
 import streamlit as st
@@ -22,7 +22,7 @@ from nltk.tokenize import word_tokenize
 from keras.layers import Dense, Dropout,Flatten
 from keras.layers import BatchNormalization
 from tensorflow.keras.callbacks import EarlyStopping
-import os
+# import os
 import easyocr
 import wordninja
 import re
