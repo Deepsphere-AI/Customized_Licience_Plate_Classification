@@ -660,8 +660,11 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 	with c43:
 		if Test_Option:
 			st.write("")
-			df = pd.read_csv("OutPut.csv")
-			st.dataframe(df.head(df.shape[0]),width=800,height=400)
+			try:
+				df = pd.read_csv("OutPut.csv")
+				st.dataframe(df.head(df.shape[0]),width=800,height=400)
+			except:
+				pass
 		# temp_reset()
 	with c44:
 		st.write("")
@@ -680,12 +683,15 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 			# 	return df.to_csv().encode('utf-8')
 			# 	df = pd.read_csv("OutPut.csv")
 			# csv = convert_df(df)
-			df = pd.read_csv("OutPut.csv")
-			data = df.to_csv().encode('utf-8')
-			Downlaod_Button = st.download_button("Download",data,file_name="OutPut.csv",mime='csv')
-			Test_Option = "Select to test uploaded Images"
+			try:
+				df = pd.read_csv("OutPut.csv")
+				data = df.to_csv().encode('utf-8')
+				Downlaod_Button = st.download_button("Download",data,file_name="OutPut.csv",mime='csv')
+			exept:
+				pass
+#			Test_Option = "Select to test uploaded Images"
 # 			if Downlaod_Button == True:
-# 				st.download_button(label="",data=csv,file_name='Model_Outcome.csv',mime='text/csv',
+# 				st.download_button(label="",data=csv,file_name='Model_Outcome.csv',mime='text/csv',)
 # )
 	with c53:
 		st.write("")
