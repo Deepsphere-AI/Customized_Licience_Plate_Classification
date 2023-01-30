@@ -2,6 +2,7 @@ tensorflow
 sklearn
 matplotlib
 seaborn
+torch
 easyocr
 opencv-python
 pillow
@@ -12,4 +13,3 @@ nltk
 os-sys
 numpy
 streamlit
-spacy
