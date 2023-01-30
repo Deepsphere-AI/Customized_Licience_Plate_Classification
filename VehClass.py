@@ -433,7 +433,7 @@ with c23:
 		if select4 in st_list4:
 			empty_list.append(select4)
 		if select4 in st_list4:
-			df = pd.read_csv("/content/drive/MyDrive/NumPlate.csv")
+			df = pd.read_csv("NumPlate.csv")
 
 with c24:
 	st.write("")
