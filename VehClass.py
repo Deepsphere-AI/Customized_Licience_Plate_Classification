@@ -489,7 +489,7 @@ with c32:
 		st.markdown("#### **Hyper Parameter Tunning**")
 with c33:
 	# Hyperparameters for Deep Lerning
-	if len(empty_list)!=0 and len(features_list)==2 and Algorithm_Selected=="Deep Learning":
+	if len(empty_list)!=0 and len(features_list)==2 and Algorithm_Selected=='Artificial Neural Network':
 		Epoch_Value = st.slider("Number of Epochs", min_value=45, max_value=60, value=50, step=1)	# Hp_Value = st.selectbox("",["Select the HyperParameter","H1","H2"])
 		# Hp_Value = st.slider("Test Size", min_value=0.0, max_value=0.25, value=0.1, step=0.05)
 		if Epoch_Value!=0:
