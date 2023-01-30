@@ -1,4 +1,4 @@
-# import spacy
+#import spacy
 import nltk
 import cv2
 import streamlit as st
@@ -22,7 +22,7 @@ from nltk.tokenize import word_tokenize
 from keras.layers import Dense, Dropout,Flatten
 from keras.layers import BatchNormalization
 from tensorflow.keras.callbacks import EarlyStopping
-# import os
+#import os
 import easyocr
 import wordninja
 import re
@@ -32,6 +32,10 @@ st.set_page_config(layout='wide')
 with open('style.css') as f:
 	st.markdown (f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
+#tensorflow-intel==2.5.0
+# tensorflow-estimator==2.8.0
+# tensorflow-io-gcs-filesystem==0.30.0
+# termcolor==2.2.0
 
 select1 = None
 select2 = None
@@ -335,13 +339,13 @@ with c12:
 		st.markdown("#### **Model Selection**")
 with c13:
 	if select2 in st_list2:
-		Algorithm_Selected = st.selectbox("",['Select the Model','Random Forest','Logistic Regression','Artifcial Neural Network'])
+		Algorithm_Selected = st.selectbox("",['Select the Model','Random Forest','Logistic Regression','Deep Learning'])
 with c14:
 	st.write("")
 with c15:
 	st.write("")
 
-st_list3 = ['Decision Tree','Random Forest','Logistic Regression','Artifcial Neural Network']
+st_list3 = ['Decision Tree','Random Forest','Logistic Regression','Deep Learning']
 #c21,c22,c23,c24,c25 = st.columns([0.25,1.5,2.75,0.25,1.75])
 with c11:
 	st.write("")
@@ -429,7 +433,7 @@ with c23:
 		if select4 in st_list4:
 			empty_list.append(select4)
 		if select4 in st_list4:
-			df = pd.read_csv("NumPlate.csv")
+			df = pd.read_csv("/content/drive/MyDrive/NumPlate.csv")
 
 with c24:
 	st.write("")
@@ -485,7 +489,7 @@ with c32:
 		st.markdown("#### **Hyper Parameter Tunning**")
 with c33:
 	# Hyperparameters for Deep Lerning
-	if len(empty_list)!=0 and len(features_list)==2 and Algorithm_Selected=="Artifcial Neural Network":
+	if len(empty_list)!=0 and len(features_list)==2 and Algorithm_Selected=="Deep Learning":
 		Epoch_Value = st.slider("Number of Epochs", min_value=45, max_value=60, value=50, step=1)	# Hp_Value = st.selectbox("",["Select the HyperParameter","H1","H2"])
 		# Hp_Value = st.slider("Test Size", min_value=0.0, max_value=0.25, value=0.1, step=0.05)
 		if Epoch_Value!=0:
@@ -532,7 +536,7 @@ with c35:
 	st.write("")
 
 
-if len(HP_List)!=0 and Algorithm_Selected=='Artifcial Neural Network' and Train_button==True:
+if len(HP_List)!=0 and Algorithm_Selected=='Deep Learning' and Train_button==True:
 
 	score,_ = Deep_Learning()
 	with c31:
@@ -622,7 +626,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 
 
 
-			elif Algorithm_Selected == "Artifcial Neural Network":
+			elif Algorithm_Selected == "Deep Learning":
 				_,model = Deep_Learning()
 				Image_Preprocessing(model)
 
@@ -635,7 +639,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 				# elif Algorithm_Selected == "Random_Forest":
 				# 	Lp_Class = Image_Preprocessing(image_path,RF_Classifier)
 				# 	st.write(Lp_Class)
-				# elif Algorithm_Selected == "Artifcial Neural Network":
+				# elif Algorithm_Selected == "Deep Learning":
 				# 	Lp_Class = Image_Preprocessing(image_path,model)
 				# 	st.write(Lp_Class)
 			# 	text,result = Image_Preprocessing(image)
@@ -660,11 +664,11 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 	with c43:
 		if Test_Option:
 			st.write("")
-			try:
-				df = pd.read_csv("OutPut.csv")
-				st.dataframe(df.head(df.shape[0]),width=800,height=400)
-			except:
-				pass
+		try:
+			df = pd.read_csv("OutPut.csv")
+			st.dataframe(df.head(df.shape[0]),width=800,height=400)
+		except:
+			pass
 		# temp_reset()
 	with c44:
 		st.write("")
@@ -683,22 +687,22 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 			# 	return df.to_csv().encode('utf-8')
 			# 	df = pd.read_csv("OutPut.csv")
 			# csv = convert_df(df)
-			try:
-				df = pd.read_csv("OutPut.csv")
-				data = df.to_csv().encode('utf-8')
-				Downlaod_Button = st.download_button("Download",data,file_name="OutPut.csv",mime='csv')
-			except:
-				pass
-#			Test_Option = "Select to test uploaded Images"
+		try:
+			df = pd.read_csv("OutPut.csv")
+			data = df.to_csv().encode('utf-8')
+			Downlaod_Button = st.download_button("Download",data,file_name="OutPut.csv",mime='csv')
+		except:
+			pass
+			#Test_Option = "Select to test uploaded Images"
 # 			if Downlaod_Button == True:
-# 				st.download_button(label="",data=csv,file_name='Model_Outcome.csv',mime='text/csv',)
+# 				st.download_button(label="",data=csv,file_name='Model_Outcome.csv',mime='text/csv',
 # )
 	with c53:
 		st.write("")
 
 
 st.sidebar.selectbox("",['Library Used','Streamlit','Pandas','Opencv','scikit-learn','Tensorflow'],key='key2')
-st.sidebar.selectbox("",['Model Implemented','Random Forest','Logistic Regression','Artifcial Neural Network'],key='key3')
+st.sidebar.selectbox("",['Model Implemented','Random Forest','Logistic Regression','Deep Learning'],key='key3')
 
 c61,c62,c63 = st.sidebar.columns((1,1,1))
 with c61:
