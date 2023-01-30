@@ -12,3 +12,4 @@ regex
 nltk
 numpy
 streamlit
+pandas
