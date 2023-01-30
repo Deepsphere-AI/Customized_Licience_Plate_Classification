@@ -4,7 +4,7 @@ matplotlib
 seaborn
 torch
 easyocr
-opencv-python
+opencv-python-headless<=4.5.4.60
 pillow
 textblob
 wordninja
