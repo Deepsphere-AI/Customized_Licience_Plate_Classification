@@ -1,0 +1,122 @@
+div.css-6qob1r.e1fqkh3o3 {
+    background-color: #4c85e4;
+    border: 2px solid #CCCCCC;
+    padding: 5% 1% 5% -1%;
+    border-radius: 5px;
+}
+
+.css-163ttbj {
+    position: relative;
+    top: 2px;
+    background-color: rgb(240, 242, 246);
+    z-index: 999991;
+    min-width: 300px;
+    max-width: 300px;
+    transform: none;
+    transition: transform 300ms ease 0s, min-width 300ms ease 0s, max-width 300ms ease 0s;
+}
+
+.css-629wbf {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.6rem 0.6rem;
+    border-radius: 0.25rem;
+    margin-left: 55px;
+    line-height: 1.6;
+    color: inherit;
+    width: 150px;
+    user-select: none;
+    background-color: rgb(30 228 30);
+    border: 1px solid rgba(49, 51, 63, 0.2);
+}
+
+.st-c8 {
+    padding-bottom: 0.5rem;
+}
+
+.st-c9 {
+    padding-left: 0.5rem;
+}
+
+.st-c9 {
+    padding-right: 0.5rem;
+}
+
+.st-af {
+    font-size: 1.2rem;
+}
+
+.st-ae {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.st-c5 {
+    flex-wrap: nowrap;
+}
+
+
+h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight:700;
+    color: rgb(38, 39, 48);
+    margin: 1.5rem 0px 0.5rem;
+    padding: 0.5em 0px 0.25em;
+    line-height: 1;
+}
+
+p, ol, ul, dl {
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+
+/*.css-rncmk8 {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    --fgp-gap: var(--fgp-gap-container);
+    margin-top: var(--fgp-gap);
+    margin-right: var(--fgp-gap);
+    --fgp-gap-container: calc(var(--fgp-gap-parent,0px) - 1rem) !important;
+}
+
+.css-rncmk8 > * {
+    margin-top: var(--fgp-gap);
+    margin-right: var(--fgp-gap);
+    --fgp-gap-parent: 1rem !important;
+    --fgp-gap-item: 1rem !important;
+    --fgp-gap: var(--fgp-gap-item) !important;
+}*/
+
+.css-1x8cf1d {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    margin: 0px;
+    line-height: 1.6;
+    color: inherit;
+    width: auto;
+    user-select: none;
+    background-color: rgb(30 228 30);
+    border: 1px solid rgba(49, 51, 63, 0.2);
+}
+
+
+
+.css-ht50i {
+    width: calc(8.09091% - 1rem);
+    flex: 1 1 calc(9.09091% - 1rem);
+}
