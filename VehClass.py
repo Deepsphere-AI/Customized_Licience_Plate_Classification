@@ -46,7 +46,7 @@ empty_list = []
 features_list = []
 HP_List = []
 score_list = []
-global flag
+# global flag
 flag = False
 Test_Preview = False
 test_list = []
