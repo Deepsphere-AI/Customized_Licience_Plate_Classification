@@ -687,7 +687,7 @@ if len(HP_List)!=0 and(Train_button==False or flag==True):
 				df = pd.read_csv("OutPut.csv")
 				data = df.to_csv().encode('utf-8')
 				Downlaod_Button = st.download_button("Download",data,file_name="OutPut.csv",mime='csv')
-			exept:
+			except:
 				pass
 #			Test_Option = "Select to test uploaded Images"
 # 			if Downlaod_Button == True:
