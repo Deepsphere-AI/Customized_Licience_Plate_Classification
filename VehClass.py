@@ -385,7 +385,7 @@ with c15:
 		st.write("")
 		st.write("")
 		st.write("")
-		Preview_button = st.button('Preview')
+		Preview_button = st.button('  Preview  ')
 
 if Preview_button is True:
 	cd1,cd2,cd3,cd4,cd5 = st.columns((2,2,2,2,2))
@@ -450,7 +450,7 @@ with c22:
 	st.write("")
 with c23:
 	if Preview_Rows == True and len(empty_list)!=0:
-		st.dataframe(df.head(10),width=700,height=400)
+		st.dataframe(df.head(10),width=700)
 	elif Preview_Rows == True and len(empty_list)==0:
 		st.error("Select Training Dataset")
 with c24:
