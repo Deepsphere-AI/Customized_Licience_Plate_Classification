@@ -385,7 +385,7 @@ with c15:
 		st.write("")
 		st.write("")
 		st.write("")
-		Preview_button = st.button('Preview')
+		Preview_button = st.button('Preview 5 Images')
 
 if Preview_button is True:
 	cd1,cd2,cd3,cd4,cd5 = st.columns((2,2,2,2,2))
@@ -441,7 +441,7 @@ with c25:
 	st.write("")
 	st.write("")
 	if len(file_uploaded)>=1:
-		Preview_Rows = st.button("Preview")
+		Preview_Rows = st.button("Preview 10 Rows")
 
 
 with c21:
