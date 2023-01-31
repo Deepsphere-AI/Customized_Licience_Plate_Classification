@@ -450,7 +450,7 @@ with c22:
 	st.write("")
 with c23:
 	if Preview_Rows == True and len(empty_list)!=0:
-		st.dataframe(df.head(10),width=700)
+		st.dataframe(df.sample(10),width=700)
 	elif Preview_Rows == True and len(empty_list)==0:
 		st.error("Select Training Dataset")
 with c24:
