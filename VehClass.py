@@ -441,7 +441,7 @@ with c25:
 	st.write("")
 	st.write("")
 	if len(file_uploaded)>=1:
-		Preview_Rows = st.button("Preview 10 Rows")
+		Preview_Rows = st.button("Preview 10  Rows")
 
 
 with c21:
