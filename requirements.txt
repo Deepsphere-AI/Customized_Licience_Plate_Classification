@@ -1,15 +1,12 @@
-tensorflow
-scikit-learn
-matplotlib
-seaborn
-torch
-easyocr
+Pillow == 9.3.0
+streamlit == 1.15.2
+pandas==1.5.2
+torch == 1.13.1
+numpy==1.24.0
 opencv-python-headless<=4.5.4.60
-pillow
-textblob
-wordninja
-regex
-nltk
-numpy
-streamlit
-pandas
+torchvision==0.14.1
+easyocr==1.6.2
+openai==0.26.5
+scikit-learn==1.2.1
+wordninja==2.0.0
+textblob==0.17.1
